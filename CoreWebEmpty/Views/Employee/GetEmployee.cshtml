@@ -1,0 +1,28 @@
+﻿@*Not Required Here, as ViewImports file will take care of imports*@
+@*@model CoreWebEmpty.Models.Employee*@
+@model Employee
+
+
+
+@*Not Required Here, as ViewStart file will take care of layout file*@
+@*@{
+            Layout = "~/Views/Shared/_Layout.cshtml";
+            ViewBag.Title = "Employee Details";
+}*@
+
+@{
+    ViewBag.Title = "Employee Details";
+}
+
+<div>
+    ID: @Model.ID
+</div>
+<div>
+    Name: @Model.Name
+</div>
+<div>
+    Email: @Model.Email
+</div>
+<div>
+    Department: @Model.Department
+</div>

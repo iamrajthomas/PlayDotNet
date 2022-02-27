@@ -1,0 +1,24 @@
+﻿@model IEnumerable<CoreWeb.Models.EmployeeModel>
+
+@{
+    ViewData["Title"] = "Employee Name List";
+}
+
+<h2>Employee Name List</h2>
+<div style="font-family: Arial;">
+
+    <ul>
+        @foreach (EmployeeModel emp in Model)
+        {
+            <li>@Html.ActionLink(emp.Name, "Details", new { Id = emp.EmployeeId }, null)</li>
+        }
+    </ul>
+
+</div>
+
+@*<li>@Html.ActionLink(emp.Name, $"Details/{emp.EmployeeId}")</li*@>
+
+
+<div>
+    @Html.ActionLink("Back To Department List", "Index", "Department")
+</div>

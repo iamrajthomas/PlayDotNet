@@ -1,0 +1,5 @@
+C:\TFS\source\repos\PlayDotNet\Logger\bin\Debug\Logger.dll
+C:\TFS\source\repos\PlayDotNet\Logger\bin\Debug\Logger.pdb
+C:\TFS\source\repos\PlayDotNet\Logger\obj\Debug\Logger.csproj.CoreCompileInputs.cache
+C:\TFS\source\repos\PlayDotNet\Logger\obj\Debug\Logger.dll
+C:\TFS\source\repos\PlayDotNet\Logger\obj\Debug\Logger.pdb

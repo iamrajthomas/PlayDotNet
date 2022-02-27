@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="EmployeePortalModelStoreContainer" CdmEntityContainer="EmployeePortalEntities2">
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="EmployeePortalModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="SystemConfigruationDetails" ColumnName="SystemConfigruationDetails" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Job" ColumnName="Job" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Department" ColumnName="Department" />
+          <ScalarProperty Name="HourlyPay" ColumnName="HourlyPay" />
+          <ScalarProperty Name="Bonus" ColumnName="Bonus" />
+          <ScalarProperty Name="Employee_TypeId" ColumnName="Employee_TypeId" />
+          <ScalarProperty Name="HouseAllowance" ColumnName="HouseAllowance" />
+          <ScalarProperty Name="MedicalAllowance" ColumnName="MedicalAllowance" />
+          <ScalarProperty Name="ComputerDetails" ColumnName="ComputerDetails" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Type">
+      <EntityTypeMapping TypeName="EmployeePortalModel.Employee_Type">
+        <MappingFragment StoreEntitySet="Employee_Type">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

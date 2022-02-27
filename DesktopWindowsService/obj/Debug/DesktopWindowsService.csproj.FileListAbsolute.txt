@@ -1,0 +1,7 @@
+C:\TFS\source\repos\PlayDotNet\DesktopWindowsService\bin\Debug\DesktopWindowsService.exe.config
+C:\TFS\source\repos\PlayDotNet\DesktopWindowsService\bin\Debug\DesktopWindowsService.exe
+C:\TFS\source\repos\PlayDotNet\DesktopWindowsService\bin\Debug\DesktopWindowsService.pdb
+C:\TFS\source\repos\PlayDotNet\DesktopWindowsService\obj\Debug\DesktopWindowsService.csprojAssemblyReference.cache
+C:\TFS\source\repos\PlayDotNet\DesktopWindowsService\obj\Debug\DesktopWindowsService.csproj.CoreCompileInputs.cache
+C:\TFS\source\repos\PlayDotNet\DesktopWindowsService\obj\Debug\DesktopWindowsService.exe
+C:\TFS\source\repos\PlayDotNet\DesktopWindowsService\obj\Debug\DesktopWindowsService.pdb

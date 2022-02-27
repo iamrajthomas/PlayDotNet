@@ -1,0 +1,15 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+
+@*Below can be a mock logic to show different layout for different roles/ users*@
+
+@*@if (User.IsInRole("Admin"))
+{
+    Layout = "_AdminLayout";
+}
+else
+{
+    Layout = "_NonAdminLayout";
+}*@

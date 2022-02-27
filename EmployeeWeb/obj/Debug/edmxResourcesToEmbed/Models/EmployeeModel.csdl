@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EmployeePortalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Job" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Number" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="HourlyPay" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Bonus" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Employee_TypeId" Type="Int32" Nullable="false" />
+    <Property Name="HouseAllowance" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="MedicalAllowance" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ComputerDetails" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Employee_Type" Relationship="Self.FK_Employee_Employee_Type" FromRole="Employee" ToRole="Employee_Type" />
+    <Property Name="SystemConfigruationDetails" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Employee_Type">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Employees" Relationship="Self.FK_Employee_Employee_Type" FromRole="Employee_Type" ToRole="Employee" />
+  </EntityType>
+  <Association Name="FK_Employee_Employee_Type">
+    <End Role="Employee_Type" Type="Self.Employee_Type" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee_Type">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Employee_TypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="EmployeePortalEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Employee_Type" EntityType="Self.Employee_Type" />
+    <AssociationSet Name="FK_Employee_Employee_Type" Association="Self.FK_Employee_Employee_Type">
+      <End Role="Employee_Type" EntitySet="Employee_Type" />
+      <End Role="Employee" EntitySet="Employees" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

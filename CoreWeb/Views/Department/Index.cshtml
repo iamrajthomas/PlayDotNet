@@ -1,0 +1,19 @@
+﻿@using CoreWeb.Models;
+
+@model List<DepartmentModel>
+
+@{
+    ViewData["Title"] = "Department List";
+}
+
+<h2>Department List</h2>
+
+<div>
+    <ul>
+        @foreach (var department in Model)
+        {
+            @*<li>@Html.ActionLink(department.Name, $"Index/{department.ID}", "Employee", null, null)</li>*@
+            <li>@Html.ActionLink(department.Name, $"Index", "Employee", new { departmentId = department.ID}, null)</li>
+        }
+    </ul>
+</div>
